@@ -19,20 +19,20 @@ if [ "$1" = "configure" -o "$1" = "abort-upgrade" ]; then
             desktop-background \
             /usr/share/images/desktop-base/$background $priority
     done << EOF
-lines-wallpaper_1280x1024.svg 65
-lines-wallpaper_1600x1200.svg 65
-lines-wallpaper_1920x1080.svg 70
-lines-wallpaper_1920x1200.svg 65
-lines-wallpaper_2560x1080.svg 65
-joy-wallpaper_1600x1200.svg 60
-joy-wallpaper_1280x1024.svg 60
-joy-wallpaper_1920x1080.svg 60
-joy-wallpaper_1920x1200.svg 60
-joy-inksplat-wallpaper_1920x1080.svg 60
-spacefun-wallpaper.svg 50
-spacefun-wallpaper-widescreen.svg  50
-moreblue-orbit-wallpaper.svg 40
-moreblue-orbit-wallpaper-widescreen.svg 40
+anger-wallpaper_1280x1024.svg 60
+anger-wallpaper_1600x1200.svg 60
+anger-wallpaper_1920x1080.svg 60
+anger-wallpaper_1920x1200.svg 60
+anger-wallpaper_2560x1080.svg 60
+blue-wallpaper_1280x1024.svg 65
+blue-wallpaper_1600x1200.svg 65
+blue-wallpaper_1920x1080.svg 70
+blue-wallpaper_1920x1200.svg 65
+blue-wallpaper_2560x1080.svg 65
+gray-wallpaper_1600x1200.svg 55
+gray-wallpaper_1280x1024.svg 55
+gray-wallpaper_1920x1080.svg 55
+gray-wallpaper_1920x1200.svg 55
 EOF
 
     # Set up an alternative for the XML version of the background
@@ -43,8 +43,9 @@ EOF
             desktop-background.xml \
             /usr/share/images/desktop-base/$desktopbackground $priority
     done << EOF
-lines.xml 20
-joy.xml 10
+anger.xml 10
+blue.xml 20
+gray.xml 15
 EOF
 
     # Alternatives for the splash
@@ -54,28 +55,27 @@ EOF
             desktop-splash \
             /usr/share/images/desktop-base/$splash $priority
     done << EOF
-spacefun-splash.svg 50
-moreblue-orbit-splash.png 40
+pardus-splash.png 50
 EOF
 
     # Alternatives for grub
     ## Favor widescreen / hi-res background for efi installations
     num_grub_efi_installed=$(dpkg-query --list "grub-efi*" | grep "^i" | wc -l)
     if [ $num_grub_efi_installed -gt 0 ] ; then
-        lines_grub_prio=15
-        lines_grub_1920_prio=20
+        pardus_grub_prio=15
+        pardus_grub_1920_prio=20
     else
-        lines_grub_prio=20
-        lines_grub_1920_prio=15
+        pardus_grub_prio=20
+        pardus_grub_1920_prio=15
     fi
     update-alternatives --install \
         /usr/share/images/desktop-base/desktop-grub.png \
         desktop-grub \
-        /usr/share/images/desktop-base/lines-grub.png $lines_grub_prio
+        /usr/share/images/desktop-base/pardus-grub.png $pardus_grub_prio
     update-alternatives --install \
         /usr/share/images/desktop-base/desktop-grub.png \
         desktop-grub \
-        /usr/share/images/desktop-base/lines-grub-1920x1080.png $lines_grub_1920_prio
+        /usr/share/images/desktop-base/pardus-grub-1920x1080.png $pardus_grub_1920_prio
 
     while read background priority; do
         update-alternatives --install \
@@ -83,9 +83,6 @@ EOF
             desktop-grub \
             /usr/share/images/desktop-base/$background $priority
     done << EOF
-joy-grub.png 15
-spacefun-grub.png 15
-spacefun-grub-widescreen.png 14
 EOF
 
     # GRUB background

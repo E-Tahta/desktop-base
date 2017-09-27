@@ -42,67 +42,47 @@ install:
 	$(INSTALL) kde-wallpaper/10-desktop-base.js $(DESTDIR)/usr/share/kde4/apps/plasma-desktop/init/
 
 	# KDE Wallpaper
-	## Joy
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy
-	$(INSTALL) kde-wallpaper/joy/metadata.desktop $(DESTDIR)/usr/share/wallpapers/joy/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy/contents
-	$(INSTALL) kde-wallpaper/joy/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/joy/contents/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy/contents/images
-	$(INSTALL) $(wildcard kde-wallpaper/joy/contents/images/*) $(DESTDIR)/usr/share/wallpapers/joy/contents/images/
-	# Inksplat Version
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy_inksplat
-	$(INSTALL) kde-wallpaper/joy_inksplat/metadata.desktop $(DESTDIR)/usr/share/wallpapers/joy_inksplat/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents
-	$(INSTALL) kde-wallpaper/joy_inksplat/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/images
-	$(INSTALL) $(wildcard kde-wallpaper/joy_inksplat/contents/images/*) $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/images/
-	## Lines
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/Lines
-	$(INSTALL) kde-wallpaper/Lines/metadata.desktop $(DESTDIR)/usr/share/wallpapers/Lines/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/Lines/contents
-	$(INSTALL) kde-wallpaper/Lines/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/Lines/contents/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/Lines/contents/images
-	$(INSTALL) $(wildcard kde-wallpaper/Lines/contents/images/*) $(DESTDIR)/usr/share/wallpapers/Lines/contents/images/
+	## Anger
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/anger
+	$(INSTALL) kde-wallpaper/anger/metadata.desktop $(DESTDIR)/usr/share/wallpapers/anger/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/anger/contents
+	$(INSTALL) kde-wallpaper/anger/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/anger/contents/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/anger/contents/images
+	$(INSTALL) $(wildcard kde-wallpaper/anger/contents/images/*) $(DESTDIR)/usr/share/wallpapers/anger/contents/images/
+	## Blue
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue
+	$(INSTALL) kde-wallpaper/blue/metadata.desktop $(DESTDIR)/usr/share/wallpapers/blue/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue/contents
+	$(INSTALL) kde-wallpaper/blue/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/blue/contents/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue/contents/images
+	$(INSTALL) $(wildcard kde-wallpaper/blue/contents/images/*) $(DESTDIR)/usr/share/wallpapers/blue/contents/images/
+	## Gray
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/gray
+	$(INSTALL) kde-wallpaper/gray/metadata.desktop $(DESTDIR)/usr/share/wallpapers/gray/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/gray/contents
+	$(INSTALL) kde-wallpaper/gray/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/gray/contents/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/gray/contents/images
+	$(INSTALL) $(wildcard kde-wallpaper/gray/contents/images/*) $(DESTDIR)/usr/share/wallpapers/gray/contents/images/
 
 
 	# KDM theme
 	mkdir -p $(DESTDIR)/etc/default/kdm.d
 	$(INSTALL) kdm-theme/kdm.d/10_desktop-base $(DESTDIR)/etc/default/kdm.d
-	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/joy
-	$(INSTALL) $(wildcard kdm-theme/joy/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/joy
-	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/lines
-	$(INSTALL) $(wildcard kdm-theme/lines/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/lines
+	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/blue
+	$(INSTALL) $(wildcard kdm-theme/blue/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/blue
 
 	# KSPLASH themes
-	## Joy
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy
-	$(INSTALL) ksplash-theme/joy/Preview.png $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy
-	$(INSTALL) ksplash-theme/joy/Theme.rc $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1024x768
-	$(INSTALL) $(wildcard ksplash-theme/joy/1024x768/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1024x768
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1280x800
-	$(INSTALL) $(wildcard ksplash-theme/joy/1280x800/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1280x800
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1280x1024
-	$(INSTALL) $(wildcard ksplash-theme/joy/1280x1024/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1280x1024
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1366x768
-	$(INSTALL) $(wildcard ksplash-theme/joy/1366x768/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1366x768
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1600x1200
-	$(INSTALL) $(wildcard ksplash-theme/joy/1600x1200/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1600x1200
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1080
-	$(INSTALL) $(wildcard ksplash-theme/joy/1920x1080/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1080
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1200
-	$(INSTALL) $(wildcard ksplash-theme/joy/1920x1200/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1200
-	## Lines
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/lines/images
-	$(INSTALL) $(wildcard ksplash-theme/lines/*.qml) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/lines
-	$(INSTALL) $(wildcard ksplash-theme/lines/*.png) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/lines
-	$(INSTALL) $(wildcard ksplash-theme/lines/*.rc) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/lines
-	$(INSTALL) $(wildcard ksplash-theme/lines/images/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/lines/images
+	## Blue
+	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue/images
+	$(INSTALL) $(wildcard ksplash-theme/blue/*.qml) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
+	$(INSTALL) $(wildcard ksplash-theme/blue/*.png) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
+	$(INSTALL) $(wildcard ksplash-theme/blue/*.rc) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
+	$(INSTALL) $(wildcard ksplash-theme/blue/images/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue/images
 
 
 	# Xfce 4.6
 	mkdir -p $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml
-	$(INSTALL) $(wildcard profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml/*) $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml
+	$(INSTALL) $(wildcard profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml/*) $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml	
 	# GNOME background descriptor
 	mkdir -p $(DESTDIR)/usr/share/gnome-background-properties
 	$(INSTALL) gnome-backgrounds.xml $(DESTDIR)/usr/share/gnome-background-properties/debian.xml
@@ -110,20 +90,12 @@ install:
 	$(INSTALL) login/background.svg $(DESTDIR)/usr/share/images/desktop-base/login-background.svg
 
 	# grub
-	$(INSTALL) grub/lines-grub.png $(DESTDIR)/usr/share/images/desktop-base/
-	$(INSTALL) grub/lines-grub-1920x1080.png $(DESTDIR)/usr/share/images/desktop-base/
-	$(INSTALL) grub/joy-grub.png $(DESTDIR)/usr/share/images/desktop-base/
-	$(INSTALL) grub/spacefun-grub.png $(DESTDIR)/usr/share/images/desktop-base/
-	$(INSTALL) grub/spacefun-grub-widescreen.png $(DESTDIR)/usr/share/images/desktop-base/
+	$(INSTALL) grub/pardus-grub.png $(DESTDIR)/usr/share/images/desktop-base/
+	$(INSTALL) grub/pardus-grub-1920x1080.png $(DESTDIR)/usr/share/images/desktop-base/
 	$(INSTALL) grub/grub_background.sh $(DESTDIR)/usr/share/desktop-base/
 
 	# plymouth
-	install -d $(DESTDIR)/usr/share/plymouth/themes/spacefun
-	$(INSTALL) $(wildcard plymouth/spacefun/*) $(DESTDIR)/usr/share/plymouth/themes/spacefun
+	install -d $(DESTDIR)/usr/share/plymouth/themes/runner
+	$(INSTALL) $(wildcard plymouth/runner/*) $(DESTDIR)/usr/share/plymouth/themes/runner
 
-	install -d $(DESTDIR)/usr/share/plymouth/themes/joy
-	$(INSTALL) $(wildcard plymouth/joy/*) $(DESTDIR)/usr/share/plymouth/themes/joy
-
-	install -d $(DESTDIR)/usr/share/plymouth/themes/lines
-	$(INSTALL) $(wildcard plymouth/lines/*) $(DESTDIR)/usr/share/plymouth/themes/lines
 

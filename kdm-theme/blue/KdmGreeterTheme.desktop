@@ -1,0 +1,8 @@
+[KdmGreeterTheme]
+Encoding=UTF-8
+Greeter=blue.xml
+Name=Blue
+Description=Default KDM theme for ETA
+Author=Yunusemre Şentürk
+Copyright=(c) Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+Screenshot=screenshot.png

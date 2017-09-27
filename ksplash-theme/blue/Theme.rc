@@ -1,0 +1,7 @@
+[KSplash Theme: blue]
+Name = Blue Splash Screen for ETA
+Description = Pardus ETA icin KDE plasma Splash Screen
+Version = 1.1
+Author = Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr> 
+Homepage = http://pardus.org.tr
+Engine = KSplashQML
