@@ -65,8 +65,8 @@ EOF
         pardus_grub_prio=15
         pardus_grub_1920_prio=20
     else
-        pardus_grub_prio=20
-        pardus_grub_1920_prio=15
+        pardus_grub_prio=15
+        pardus_grub_1920_prio=20
     fi
     update-alternatives --install \
         /usr/share/images/desktop-base/desktop-grub.png \
