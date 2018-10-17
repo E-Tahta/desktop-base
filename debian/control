@@ -1,7 +1,7 @@
 Source: desktop-base
 Section: x11
 Priority: optional
-Maintainer: Gustavo Franco <stratus@debian.org>
+Maintainer: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
 Uploaders: Loïc Minier <lool@dooz.org>,
            Fathi Boudra <fabo@debian.org>,
            Yves-Alexis Perez <corsac@debian.org>,
