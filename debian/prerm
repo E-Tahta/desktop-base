@@ -11,11 +11,7 @@ if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
           anger-wallpaper_1920x1080.svg \
           anger-wallpaper_1920x1200.svg \
           anger-wallpaper_2560x1080.svg \
-          blue-wallpaper_2560x1080.svg \
-          blue-wallpaper_1600x1200.svg \
-          blue-wallpaper_1280x1024.svg \
-          blue-wallpaper_1920x1080.svg \
-          blue-wallpaper_1920x1200.svg \
+          eta-wallpaper_1920x1080.svg \
           gray-wallpaper_1280x1024.svg \
           gray-wallpaper_1600x1200.svg \
           gray-wallpaper_1920x1080.svg \
@@ -26,7 +22,7 @@ if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
     # remove desktop-background.xml alternatives
     for desktopbackground in \
           anger.xml \
-          blue.xml \
+          eta.xml \
           gray.xml \
           ; do
         update-alternatives --remove desktop-background.xml /usr/share/images/desktop-base/$desktopbackground

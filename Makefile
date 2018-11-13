@@ -49,13 +49,13 @@ install:
 	$(INSTALL) kde-wallpaper/anger/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/anger/contents/
 	mkdir -p $(DESTDIR)/usr/share/wallpapers/anger/contents/images
 	$(INSTALL) $(wildcard kde-wallpaper/anger/contents/images/*) $(DESTDIR)/usr/share/wallpapers/anger/contents/images/
-	## Blue
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue
-	$(INSTALL) kde-wallpaper/blue/metadata.desktop $(DESTDIR)/usr/share/wallpapers/blue/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue/contents
-	$(INSTALL) kde-wallpaper/blue/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/blue/contents/
-	mkdir -p $(DESTDIR)/usr/share/wallpapers/blue/contents/images
-	$(INSTALL) $(wildcard kde-wallpaper/blue/contents/images/*) $(DESTDIR)/usr/share/wallpapers/blue/contents/images/
+	## Eta
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/eta
+	$(INSTALL) kde-wallpaper/eta/metadata.desktop $(DESTDIR)/usr/share/wallpapers/eta/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/eta/contents
+	$(INSTALL) kde-wallpaper/eta/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/eta/contents/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/eta/contents/images
+	$(INSTALL) $(wildcard kde-wallpaper/eta/contents/images/*) $(DESTDIR)/usr/share/wallpapers/eta/contents/images/
 	## Gray
 	mkdir -p $(DESTDIR)/usr/share/wallpapers/gray
 	$(INSTALL) kde-wallpaper/gray/metadata.desktop $(DESTDIR)/usr/share/wallpapers/gray/
@@ -68,21 +68,21 @@ install:
 	# KDM theme
 	mkdir -p $(DESTDIR)/etc/default/kdm.d
 	$(INSTALL) kdm-theme/kdm.d/10_desktop-base $(DESTDIR)/etc/default/kdm.d
-	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/blue
-	$(INSTALL) $(wildcard kdm-theme/blue/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/blue
+	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/eta
+	$(INSTALL) $(wildcard kdm-theme/eta/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/eta
 
 	# KSPLASH themes
-	## Blue
-	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue/images
-	$(INSTALL) $(wildcard ksplash-theme/blue/*.qml) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
-	$(INSTALL) $(wildcard ksplash-theme/blue/*.png) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
-	$(INSTALL) $(wildcard ksplash-theme/blue/*.rc) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue
-	$(INSTALL) $(wildcard ksplash-theme/blue/images/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/blue/images
+	## Eta
+	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/eta/images
+	$(INSTALL) $(wildcard ksplash-theme/eta/*.qml) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/eta
+	$(INSTALL) $(wildcard ksplash-theme/eta/*.png) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/eta
+	$(INSTALL) $(wildcard ksplash-theme/eta/*.rc) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/eta
+	$(INSTALL) $(wildcard ksplash-theme/eta/images/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/eta/images
 
 
 	# Xfce 4.6
 	mkdir -p $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml
-	$(INSTALL) $(wildcard profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml/*) $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml	
+	$(INSTALL) $(wildcard profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml/*) $(DESTDIR)/usr/share/desktop-base/profiles/xdg-config/xfce4/xfconf/xfce-perchannel-xml
 	# GNOME background descriptor
 	mkdir -p $(DESTDIR)/usr/share/gnome-background-properties
 	$(INSTALL) gnome-backgrounds.xml $(DESTDIR)/usr/share/gnome-background-properties/debian.xml
@@ -97,5 +97,3 @@ install:
 	# plymouth
 	install -d $(DESTDIR)/usr/share/plymouth/themes/runner
 	$(INSTALL) $(wildcard plymouth/runner/*) $(DESTDIR)/usr/share/plymouth/themes/runner
-
-

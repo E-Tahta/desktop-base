@@ -10,8 +10,8 @@
     <scolor>#000000</scolor>
   </wallpaper>
   <wallpaper>
-    <name>Blue lock screen</name>
-    <filename>/usr/share/images/desktop-base/blue-lockscreen.xml</filename>
+    <name>Eta lock screen</name>
+    <filename>/usr/share/images/desktop-base/eta-lockscreen.xml</filename>
     <options>zoom</options>
     <pcolor>#ffffff</pcolor>
     <scolor>#000000</scolor>
@@ -22,5 +22,5 @@
     <options>zoom</options>
     <pcolor>#ffffff</pcolor>
     <scolor>#000000</scolor>
-  </wallpaper> 
+  </wallpaper>
 </wallpapers>

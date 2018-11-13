@@ -8,7 +8,7 @@ if dpkg-maintscript-helper supports rm_conffile 2>/dev/null; then
 fi
 
 if [ "$1" = configure ] && dpkg --compare-versions "$2" lt-nl 7; then
-  update-alternatives --remove desktop-grub /usr/share/images/desktop-base/moreblue-orbit-grub.png
+  update-alternatives --remove desktop-grub /usr/share/images/desktop-base/moreeta-orbit-grub.png
 fi
 
 if [ "$1" = "configure" -o "$1" = "abort-upgrade" ]; then
@@ -24,11 +24,7 @@ anger-wallpaper_1600x1200.svg 60
 anger-wallpaper_1920x1080.svg 60
 anger-wallpaper_1920x1200.svg 60
 anger-wallpaper_2560x1080.svg 60
-blue-wallpaper_1280x1024.svg 65
-blue-wallpaper_1600x1200.svg 65
-blue-wallpaper_1920x1080.svg 70
-blue-wallpaper_1920x1200.svg 65
-blue-wallpaper_2560x1080.svg 65
+eta-wallpaper_1920x1080.svg 70
 gray-wallpaper_1600x1200.svg 55
 gray-wallpaper_1280x1024.svg 55
 gray-wallpaper_1920x1080.svg 55
@@ -44,7 +40,7 @@ EOF
             /usr/share/images/desktop-base/$desktopbackground $priority
     done << EOF
 anger.xml 10
-blue.xml 20
+eta.xml 20
 gray.xml 15
 EOF
 
