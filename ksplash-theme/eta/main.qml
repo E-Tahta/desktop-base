@@ -15,7 +15,7 @@ Image {
             introAnimation.running = true
         }
 
-        progress = stage * 320 / 6
+        progress = stage * 320
     }
 
     Behavior on progress {
@@ -26,36 +26,67 @@ Image {
 
     Rectangle {
         id: topRect
-        width: parent.width
-        height: (root.height / 3) - bottomRect.height - 1
+        width: 200
+        height: 200
+        anchors.horizontalCenter: parent.horizontalCenter
         y: - root.height
-        color: "#4C000000"
+        color: "transparent"
         Image {
             source: "images/logo.png"
             smooth: true
             anchors.centerIn: parent
-            sourceSize.height: 200
-            sourceSize.width: 200
+            sourceSize.height: 180
+            sourceSize.width: 180
         }
     }
 
     Rectangle {
-        id: bottomRect
+        id: progressRectTop
+        anchors.top: parent.top
         width: parent.width
-        y: root.height
-        height: 50
-        color: "#4C000000"
+        height: 10
+        opacity: 0.0
+        color: "transparent"
 
         Rectangle {
             radius: 2
-            color: "#31363b"
-            anchors.centerIn: parent
+            color: "#383838"
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
             height: 10
-            width: height * 32
+            width: parent.width
             Rectangle {
                 radius: 2
                 anchors {
                     left: parent.left
+                    top: parent.top
+                    bottom: parent.bottom
+                }
+                width: progress
+                color: "#ff6c00"
+            }
+        }
+    }
+
+    Rectangle {
+        id: progressRectBottom
+        anchors.bottom: parent.bottom
+        width: parent.width
+        height: 10
+        opacity: 0.0
+        color: "transparent"
+
+        Rectangle {
+            radius: 2
+            color: "#383838"
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
+            height: 10
+            width: parent.width
+            Rectangle {
+                radius: 2
+                anchors {
+                    right: parent.right
                     top: parent.top
                     bottom: parent.bottom
                 }
@@ -72,18 +103,24 @@ Image {
         ParallelAnimation {
             PropertyAnimation {
                 property: "y"
+                easing.overshoot: 1.1
                 target: topRect
-                to: root.height / 3
-                duration: 1000
-                easing.type: Easing.OutExpo                
+                to: root.height / 3 + 24
+                duration: 800
+                easing.type: Easing.OutBack
             }
 
             PropertyAnimation {
-                property: "y"
-                target: bottomRect
-                to: 2 * (root.height / 3) - bottomRect.height
+                property: "opacity"
+                target: progressRectTop
+                to: 1.0
                 duration: 1000
-                easing.type: Easing.OutExpo                
+            }
+            PropertyAnimation {
+                property: "opacity"
+                target: progressRectBottom
+                to: 1.0
+                duration: 1000
             }
         }
     }

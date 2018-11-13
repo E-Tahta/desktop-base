@@ -1,7 +1,0 @@
-[KSplash Theme: blue]
-Name = Blue KSplash Screen
-Description = Pardus Etap için KDE4 Splash Screen
-Version = 1.2
-Author = Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr> 
-Homepage = http://pardus.org.tr
-Engine = KSplashQML
